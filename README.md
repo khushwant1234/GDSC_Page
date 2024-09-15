@@ -3,6 +3,20 @@
 
 This is Khushwant Singh's submission for the gdsc recruitments.
 
+# I haven't deployed this yet, so you'll have to run this locally. But I'll deploy this shortly
+
+# Start a SQL Database 
+run following command on mysql workbench
+```mysql workbench
+CREATE DATABASE storage;
+USE storage;
+CREATE TABLE input(
+content TEXT,
+id INT AUTO_INCREMENT PRIMARY KEY,);
+
+INSERT INTO input (content,id)
+VALUES ("Test",1)
+```
 
 ## Run Locally
 
@@ -44,8 +58,11 @@ Start the backend Server
 ```bash
 npm start
 ```
+# Now that the backend and the frontend server are started, you can use the application
 
-his is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+this is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 

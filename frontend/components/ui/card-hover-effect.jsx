@@ -15,6 +15,7 @@ import {
 import axios from "axios";
 
 
+
 export const HoverEffect = ({
   items,
   className
@@ -50,7 +51,6 @@ export const HoverEffect = ({
       {items.map((item, idx) => (
         <div 
           key={idx}
-
           className="relative group  block p-2 h-full w-full no-underline"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}>

@@ -12,24 +12,40 @@ CREATE DATABASE storage;
 USE storage;
 CREATE TABLE input(
 content TEXT,
-id INT AUTO_INCREMENT PRIMARY KEY,);
+id INT AUTO_INCREMENT PRIMARY KEY);
 
-INSERT INTO input (content,id)
-VALUES ("Test",1)
+INSERT INTO input (content,id)  
+VALUES ("Test",1) 
 ```
+Ensure the name of your table is "input".
+
 
 ## Run Locally
+Please create a database before running the application.
 
 Clone the project
 
 ```bash
   git clone https://link-to-project
 ```
-
-Go to the frontend project directory
+Go to the backend project directory
+```bash
+  cd backend
+```
+Install Backend dependencies
 
 ```bash
-  cd frontend
+npm install
+```
+Start the backend Server
+```bash
+npm start
+```
+
+Go to the frontend project directory, for this use a new terminal instance
+
+```bash
+  cd /frontend
 ```
 
 Install frontend dependencies
@@ -43,23 +59,11 @@ Start the Frontend server
 ```bash
   npm run start
 ```
-Go to the backend project directory
 
-```bash
-  cd ../backend
-```
-Install Backend dependencies
+# Now that the Database, backend and the frontend server are started, you can use the application at http://localhost:3000/
 
-```bash
-npm install
-```
-Start the backend Server
-
-```bash
-npm start
-```
-# Now that the backend and the frontend server are started, you can use the application
-
+# NOTES:
+The Edit button in the messages doesn't work as of yet
 
 
 this is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

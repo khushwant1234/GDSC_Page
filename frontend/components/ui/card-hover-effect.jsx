@@ -16,6 +16,7 @@ import axios from "axios";
 
 
 
+
 export const HoverEffect = ({
   items,
   className
@@ -23,20 +24,24 @@ export const HoverEffect = ({
 
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
+
   const [values, setValues] =  useState({
-    content: items.content 
+    content: ''
   })
 
+  const [idxx, setIdxx] = useState(0);
+
   const handleUpdate = (event) => {
-    event.preventDefault();
-     axios.put("http://localhost:8080/update/"+idx, values)
-     .then(res => {
-        console.log(res)
-     })
-  }
+      event.preventDefault();
+      axios.put("http://localhost:8080/update/"+ idxx, values)
+      .then(res => {
+          console.log(res)
+          location.reload();
+      })
+    }
 
   const handleDelete = (id) => {
-    axios.delete('http://localhost:8080/delete/'+id)
+    axios.delete('http://localhost:8080/delete/'+ id)
     .then(res => {
       console.log("deleted successfully")
       location.reload();
@@ -73,29 +78,29 @@ export const HoverEffect = ({
           <Card className="flex flex-col min-h-54 w-auto items-center justify-evenly border-black bg-[#a91d3a] rounded-xl z-0 overflow-x-auto shadow-[#fbbc05] shadow-sm">
             <CardDescription className="text-white text-lg tracking-wide font-semibold max-w-96 break-all">{item.content}</CardDescription>
             <div className="flex gap-2 justify-center items-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="outline" className="bg-[#e8e06f] border-black">
-                    Edit
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-[425px] bg-white">
-                <form onSubmit={handleUpdate} className="flex flex-col gap-2">
-                <DialogHeader>
-                    <DialogTitle>Message:</DialogTitle>
-                  </DialogHeader>
-                  <div className="border-0 rounded-md flex justify-center">
-                    <input
-                      className="border-2 w-full border-gray-300 p-4 text-center text-black" 
-                      defaultValue={item.content}
-                    />
-                  </div>
-                  <DialogFooter>
-                    <Button type="submit" >Save changes</Button>
-                  </DialogFooter>
-                </form>
-                </DialogContent>
-              </Dialog>
+            <Dialog>
+        <DialogTrigger asChild>
+            <Button variant="outline" className="bg-[#e8e06f] border-black">
+            Edit
+            </Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-[425px] bg-white">
+        <form onSubmit={handleUpdate} className="flex flex-col gap-2">
+        <DialogHeader>
+            <DialogTitle>Message:</DialogTitle>
+            </DialogHeader>
+            <div className="border-0 rounded-md flex justify-center">
+            <input
+                className="border-2 w-full border-gray-300 p-4 text-center text-black" 
+                defaultValue={item.content} onChange={e => setValues({...values, content: e.target.value})}
+            />
+            </div>
+            <DialogFooter>
+            <Button type="submit" onClick={() => setIdxx(item.id)} >Save changes</Button>
+            </DialogFooter>
+        </form>
+        </DialogContent>
+        </Dialog>
               <Button variant="outline" onClick={() => handleDelete(item.id)} className="bg-[#fbbc05] text-black border-black hover:text-white">Delete</Button>
             </div>
           </Card>

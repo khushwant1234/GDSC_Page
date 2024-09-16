@@ -38,18 +38,21 @@ app.post("/comment", (req, res) => {
 })
 
 // The Update function doesn't work currently
-// app.put("/update/:id", (req, res) => {
-//     const sql = "UPDATE input SET `content`=? WHERE id=?"
-//     const id = req.params.id;
-//     connection.query(sql, [req.body.content, id], (err, res) => {
-        
-//     })
-// })
+app.put("/update/:id", (req, res) => {
+    const sql = "UPDATE input SET `content`=? WHERE id=?"
+    const id = req.params.id;
+    console.log(id);
+    console.log(req.body.content)
+    connection.query(sql, [req.body.content, id], (err, result) => {
+    if(err) return res.json({Message: `Error Inside Server`})
+        console.log(result)
+        return res.json(result)         
+    })
+})
 
 app.delete('/delete/:id', (req, res) => {
     const sql = "DELETE FROM input WHERE id = ?";
     const id = req.params.id;
-    console.log(id);
     connection.query(sql, [id], (err, result) => {
         if(err) return res.json({Message: `Error Inside Server`})
         return res.json(result)

@@ -6,11 +6,13 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
+// type your sql database password in password:"", and database name in place of database: "storage"
+// Remember, the table you've created in your database, should have the name "input", and two columns: "content" & "id"
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'storage',
-    password: 'K@123hushwant'
+    password: ''
 });
 
 app.get('/', (req, res) => {

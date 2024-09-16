@@ -21,7 +21,7 @@ Ensure the name of your table is "input".
 
 
 ## Run Locally
-Please create a database before running the application.
+Please create a database locally before running the application. (follow the steps above)
 
 Clone the project
 
@@ -63,7 +63,16 @@ Start the Frontend server
 # Now that the Database, backend and the frontend server are started, you can use the application at http://localhost:3000/
 
 # NOTES:
-The Edit button in the messages doesn't work as of yet
+The Edit button in the messages isn't functional as of yet
+
+# Working:
+The ui is self-explanatory(use and see).
+When the input is given to the input box, the submit button sends a post request using axios to the url http://localhost:8080/comment, for which I've written an api, such that, it updates the input table with that data.
+Now, to I've written an api that sends that data present in the input table (after parsing it to json format) to the url http://localhost:8080/. In the frontend, I'm using axios.get to fetch the data from that url and then display it.
+the delete button works similar to the input button, it sends a delete request using axios to the url http://localhost:8080/delete/
+
+
+
 
 
 this is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

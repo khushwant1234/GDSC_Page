@@ -42,10 +42,10 @@ Start the backend Server
 npm start
 ```
 
-Go to the frontend project directory
+Go to the frontend project directory, for this use a new terminal instance
 
 ```bash
-  cd ../frontend
+  cd /frontend
 ```
 
 Install frontend dependencies
@@ -60,8 +60,10 @@ Start the Frontend server
   npm run start
 ```
 
-# Now that the Database, backend and the frontend server are started, you can use the application
+# Now that the Database, backend and the frontend server are started, you can use the application at http://localhost:3000/
 
+# NOTES:
+The Edit button in the messages doesn't work as of yet
 
 
 this is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

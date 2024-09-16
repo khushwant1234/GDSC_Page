@@ -12,7 +12,7 @@ CREATE DATABASE storage;
 USE storage;
 CREATE TABLE input(
 content TEXT,
-id INT AUTO_INCREMENT PRIMARY KEY,);
+id INT AUTO_INCREMENT PRIMARY KEY);
 
 INSERT INTO input (content,id)  
 VALUES ("Test",1) 

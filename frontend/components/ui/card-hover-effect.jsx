@@ -70,12 +70,12 @@ export const HoverEffect = ({
                 }} />
             )}
           </AnimatePresence>
-          <Card className="flex flex-col min-h-54 w-auto items-center justify-evenly bg-[#ea4335] rounded-xl z-0 overflow-x-auto shadow-[#fbbc05] shadow-sm">
+          <Card className="flex flex-col min-h-54 w-auto items-center justify-evenly border-black bg-[#a91d3a] rounded-xl z-0 overflow-x-auto shadow-[#fbbc05] shadow-sm">
             <CardDescription className="text-white text-lg tracking-wide font-semibold max-w-96 break-all">{item.content}</CardDescription>
             <div className="flex gap-2 justify-center items-center">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline" className="bg-[#e8e06f]">
+                  <Button variant="outline" className="bg-[#e8e06f] border-black">
                     Edit
                   </Button>
                 </DialogTrigger>
@@ -96,7 +96,7 @@ export const HoverEffect = ({
                 </form>
                 </DialogContent>
               </Dialog>
-              <Button onClick={() => handleDelete(item.id)} className="bg-[#fbbc05] text-black hover:text-white">Delete</Button>
+              <Button variant="outline" onClick={() => handleDelete(item.id)} className="bg-[#fbbc05] text-black border-black hover:text-white">Delete</Button>
             </div>
           </Card>
         </div>

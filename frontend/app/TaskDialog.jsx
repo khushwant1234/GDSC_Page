@@ -8,18 +8,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-
+import Image from 'next/image'
 
 const TaskDialog = ({title, desc, idx}) => {
   return (
-      <Dialog >
-      <DialogTrigger asChild>
-        <Button className="p-2 bg-[#34a853]">{idx}. {title}</Button>
+      <Dialog className="">
+      <DialogTrigger asChild className='flex aspect-square m-8  '>
+        <button className="p-2 aspect-square rounded-md bg-[#fbbc05] text-black flex flex-col justify-center items-center text-xl border-1 gap-3 border-black ">{idx}. {title} {idx == 1 && <p>{"{"}Click Me{"}"}</p>}</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] bg-[#eeeeee] text-black">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-          <DialogDescription>
+          <DialogTitle className="text-black">{title}</DialogTitle>
+          <DialogDescription className="text-black">
             {desc}
           </DialogDescription>
         </DialogHeader>

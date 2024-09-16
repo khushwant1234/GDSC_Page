@@ -14,22 +14,38 @@ CREATE TABLE input(
 content TEXT,
 id INT AUTO_INCREMENT PRIMARY KEY,);
 
-INSERT INTO input (content,id)
-VALUES ("Test",1)
+INSERT INTO input (content,id)  
+VALUES ("Test",1) 
 ```
+Ensure the name of your table is "input".
+
 
 ## Run Locally
+Please create a database before running the application.
 
 Clone the project
 
 ```bash
   git clone https://link-to-project
 ```
+Go to the backend project directory
+```bash
+  cd backend
+```
+Install Backend dependencies
+
+```bash
+npm install
+```
+Start the backend Server
+```bash
+npm start
+```
 
 Go to the frontend project directory
 
 ```bash
-  cd frontend
+  cd ../frontend
 ```
 
 Install frontend dependencies
@@ -43,22 +59,8 @@ Start the Frontend server
 ```bash
   npm run start
 ```
-Go to the backend project directory
 
-```bash
-  cd ../backend
-```
-Install Backend dependencies
-
-```bash
-npm install
-```
-Start the backend Server
-
-```bash
-npm start
-```
-# Now that the backend and the frontend server are started, you can use the application
+# Now that the Database, backend and the frontend server are started, you can use the application
 
 
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Compare } from "@/components/ui/compare";
-import Image from 'next/image';
 
 
 const Hero = () => {

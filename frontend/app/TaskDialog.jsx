@@ -8,7 +8,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import Image from 'next/image'
 
 const TaskDialog = ({title, desc, idx}) => {
   return (

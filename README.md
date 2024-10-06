@@ -3,7 +3,7 @@
 
 This is Khushwant Singh's submission for the gdsc recruitments.
 
-# I haven't deployed this yet, so you'll have to run this locally. But I'll deploy this shortly
+# I haven't deployed this yet, so you'll have to run this locally. 
 
 # Start a SQL Database 
 run following command on mysql workbench
